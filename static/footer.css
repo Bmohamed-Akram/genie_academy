@@ -1,0 +1,31 @@
+#lastbar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    color: white;
+    
+}
+
+.fsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px 60px;
+    min-height: 150px;
+    
+}
+
+.a{
+    color: white;
+}
+
+#lstbr{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    color: white;
+    background-color: #00ac89;
+    padding: 50px;
+}

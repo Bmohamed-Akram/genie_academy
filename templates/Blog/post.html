@@ -1,0 +1,28 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Genie blog | {{bpost.title}}</title>
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'Blog/post.css' %}">
+{% endblock head %}
+
+{% block content %}
+
+    <div class="main">
+        <h1>{{bpost.title}}</h1>
+        <br><br>
+        <div class="box">
+            <img src="{{bpost.image.url}}" class="img-fluid" id="img">
+            <br><br>
+            
+            <p>{{bpost.time}}</p>
+            <p>
+                {{bpost.body}}
+            </p>
+        </div>
+    </div>
+
+{% endblock content %}

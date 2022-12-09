@@ -1,0 +1,52 @@
+#body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+    min-height: 100vh;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    min-height: 60vh;
+    text-align: center;    
+}
+
+
+.p{
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+#btnn{
+    padding: 10px;
+    background-color: #00ac89;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #00ac89;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+label{
+    font-size: 1.3rem;
+    color: #242333;
+}
+
+.inp{
+    text-align: center;
+    padding: 5px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 0.5px solid #00ac89;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+
+#navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}

@@ -1,0 +1,39 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Genie courses</title>
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'course/course.css' %}">
+{% endblock head %}
+
+{% block content %}    
+    
+    <div class="main">
+        <h1>GENIE Courses</h1>
+        <p class="bpara">
+            We are organizing special courses which can help for a bright future with 
+            the help of talented teachers and our courses are done through online for 
+            low cost considering studying eager of the student
+        </p>
+        {% if courses %}
+        {% for course in courses reversed %}
+        <a href="Section/{{course.id}}" id="a">
+
+            <div class="card box" style="width: 20rem;">
+                <img src="{{course.image.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{course.title}}</h5>
+                  <p class="card-text">{{course.time}}</p>
+                  <p class="card-text">{{course.about|truncatewords:10}}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+        {% else %}
+        <p> No courses posted yet</p>
+        {% endif %}
+    </div>
+{% endblock content %}

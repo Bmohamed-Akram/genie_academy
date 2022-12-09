@@ -1,0 +1,57 @@
+#body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.head{
+    background-color: #242333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.card{
+    margin: 15px;
+    text-align: center;
+}
+
+.card img{
+    height: 250px;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 30px;
+}
+
+
+#img{
+    max-height: 180px;
+}
+
+.bpara{
+    font-size: 1.2rem;
+}
+
+.box:hover{
+    border: 3px solid rgb(219, 219, 219);
+    font-weight: bold;
+}
+
+#a{
+    text-decoration: none;
+    color: black;
+}
+
+#navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}

@@ -1,0 +1,57 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Genie create account</title>
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'Login/loginapp.css' %}">
+{% endblock head %}
+
+{% block content %}
+    
+    <div class="row" id="main">
+
+        <div class="col-lg-6 col-md-12 col-sm-12 order-1">
+            
+            <h1>Create account</h1>
+
+            {% if messages %}
+            {% for message in messages %}
+            <h3 class="h3">{{message}}</h3>
+            {% endfor %}
+            {% endif %}
+            <form action="/Register" method="POST">
+                {% csrf_token %}
+                <label for="user">Username</label><br>
+                <input type="text" name="username" minlength="8" placeholder="Enter username" id="user" required>
+                <br>
+                <label for="email">E-mail</label><br>
+                <input type="email" name="email"  placeholder="Enter email" id="email" required>
+                <br>
+                <label for="pass1">Password</label><br>
+                <input type="password" name="password1" minlength="8" placeholder="Create password" id="pass1" required>
+                <br>
+                <label for="pass2">Confirm password</label><br>
+                <input type="password" name="password2" minlength="8" placeholder="Confirm password" id="pass2" required>
+                <br><br>
+                
+                <input type="submit" id="btnn" value="CREATE">
+                <br><br>
+                <p><a href="/Login">already have an account?</a></p>
+                <a href="/">Home</a>
+            </form>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 order-md-1">
+            <img src="{% static 'Home/images/create-account.png' %}" class="img-fluid">
+            <br>
+            <p id="bpera">
+                Only one account can be created with your E-mail Address, 
+                You can't change your password after creating your account. So <span id="remember">remember</span> it
+            </p>
+        </div>        
+    </div>
+
+{% endblock content %}
+    

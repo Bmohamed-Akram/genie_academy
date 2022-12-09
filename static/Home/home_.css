@@ -1,0 +1,138 @@
+
+#mar,#mar2{
+    margin: 0 50px;
+}
+
+.web{
+    text-align: center;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#special{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#pad{
+    padding: auto;
+    padding-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.str{
+    max-width: 350px;
+    margin: 20px;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 400px;
+    min-height: 300px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+.strimg{
+    max-width: 90px;
+    max-height: 80px;
+}
+
+.bpera{
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.cpera{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.sub{
+    color: #00ac89;
+    font-weight: bold;
+}
+
+.cicon{
+    width: 40px;
+    height: 40px;
+    margin: 2px;
+}
+
+#contactlk{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.sec{
+    max-width: 600px;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: justify;
+}
+
+#goals{
+    background-color: #0d2233;
+    color: #f9f5f2;
+}
+
+#sectionf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#btnf{
+    background-color: #0d2233;
+    color: #f9f5f2;
+}
+
+#courses{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+    margin: 15px;
+    text-align: center;
+}
+
+.card img{
+    height: 250px;
+}
+
+#a{
+    text-decoration: none;
+    color: black;
+}
+
+.alc{
+    width: 40px;
+}

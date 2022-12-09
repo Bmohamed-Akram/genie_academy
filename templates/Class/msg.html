@@ -1,0 +1,29 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Genie Academy</title>
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'Login/loginapp.css' %}">
+{% endblock head %}
+
+{% block content %}
+    
+    <div class="row" id="main">
+        <div class="col-lg-6 col-md-12 col-sm-12 py-lg-0 py-3 order-1">
+            <h1>Registration was successful</h1>
+            <h2>
+                you will get a response via WhatsApp or mail within 24 hours
+                Thank you for joining
+            </h2>
+            <br>
+            <a href="/"><button id="btnn">Back to Home</button></a>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 order-md-1">
+            <img src="{% static 'Home/images/ty.jpg' %}" class="img-fluid">
+            
+        </div>        
+    </div>
+{% endblock content %}

@@ -1,0 +1,44 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Genie blog</title>
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'Blog/blogs.css' %}">
+{% endblock head %}
+
+{% block content %}
+    
+    <br>
+    <div class="bocs">
+        <h1>GENIE Blog</h1>
+        <p>
+            Our course details, news regarding technology, 
+            daily updates and web development updates will be updated here
+        </p>
+    </div>
+    <div class="boxx">
+        <br>
+        
+        {% if blogs %}
+        {% for blog in blogs reversed %}
+
+        <div class="card" style="width: 18rem;">
+            <img src="{{ blog.image.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{blog.title|truncatewords:3}}</h5>
+              <p class="card-text">{{blog.time}}</p>
+              <p class="card-text">{{blog.body|truncatewords:10}}</p>
+              <a href="post/{{blog.id}}" id="a">
+                <button id="btna">Read more</button>
+              </a>
+            </div>
+        </div>  
+        {% endfor %}
+        {% else %}
+        <p> No posts yet</p>
+        {% endif %}
+    </div>
+{% endblock content %}

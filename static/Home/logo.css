@@ -1,0 +1,48 @@
+#logo1{
+    background-color: aqua;
+    animation: log;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes log{
+    from{
+        transform: rotate(360deg);
+        border-radius: 15px;
+        background-color:  #FFFFFF;
+        
+
+    }
+    to{
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        
+        
+    }
+}
+
+#logo{
+    background-color: rgb(140, 0, 255);
+    animation: logo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes logo{
+    from{
+        transform: rotate(360deg);
+        border-radius: 15px;
+        background-color:  #242333;
+
+    }
+    to{
+        background-color:  #242333;
+        border-radius: 15px;
+        
+        
+    }
+}

@@ -1,0 +1,45 @@
+#body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.head{
+    background-color: #242333;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 30px;
+    align-items: center;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    text-align: justify;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+#navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}

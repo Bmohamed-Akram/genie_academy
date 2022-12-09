@@ -1,0 +1,56 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Genie courses registration</title>
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'course/register_pg.css' %}">
+{% endblock head %}
+
+{% block content %}
+    
+    <div class="row" id="main">
+        <h1>
+            GEENII Learn
+        </h1>
+        
+        <br>
+        <div class="col-lg-6 col-md-12 col-sm-12 order-1 my-md-3">
+            <p class="p">
+                Thank you for choosing our learning platform. To join our courses please 
+                fill the below details and click join. 
+                Your response will be updated within 24 hours using E-mail or Whatsapp.
+            </p>
+            <div class="box">
+                <h2>{{course.title}}</h2>
+                <form action="/save" method="POST">
+                    {% csrf_token %}
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="name" class="inp" placeholder="Enter your name" required><br><br>
+    
+                    <label for="num">Contact no (whatsapp)</label><br>
+                    <input type="number" name="contact" id="num" minlength="9" maxlength="12" class="inp" placeholder="Enter mobile num" required>
+                    
+                    {% if user.is_authenticated %}
+                    <input type="email" name="email" hidden value="{{user.email}}">
+                    <input type="text" name="interested" hidden value="{{course.title}}">
+                    {% else %}
+                    <br><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" class="inp" placeholder="Enter your email" required>
+                    <input type="text" name="interested" hidden value="{{course.title}}">
+                    {% endif %}
+                    <br><br>
+                    <input type="submit" value="JOIN" id="btnn">
+    
+                </form>
+            </div>
+            <br>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 order-sm-1 imag">
+            <img src="{{course.image.url}}" class="img-fluid" id="img" >
+        </div>
+    </div>
+{% endblock content %}

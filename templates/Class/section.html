@@ -1,0 +1,37 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Genie courses | {{course.title}}</title>
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'course/ssection.css' %}">
+{% endblock head %}
+
+{% block content %}
+        
+    <br>
+    <div id="main">
+        <h1>GENIE Courses</h1>
+            <div id="box">
+                <img src="{{course.image.url}}" class="img-fluid" id="img">
+                <br>
+                <p>
+                    {{course.time}}
+                </p>
+                <h2>{{course.title}}</h2>
+                <p id="bpera">
+                    {{course.about}}
+                </p>
+                <p>
+                    <b>Duration:</b> {{course.duration}} <br>
+                    <b>Payment:</b> {{course.payment}} <br>
+                    <b>via :</b> {{course.via}} <br>
+                    <b>Starting :</b> {{course.start}} <br>
+                    <b>Certification :</b> {{course.certification}} <br>
+                </p>
+                <a href="/join/{{course.id}}"><button id="btnn">Like to Join</button></a>
+            </div>
+    </div>
+{% endblock content %}

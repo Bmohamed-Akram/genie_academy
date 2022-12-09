@@ -1,0 +1,51 @@
+{% extends 'layout/main.html' %}
+{% load static %}
+
+{% block title %}
+<title>Login to Genie</title>
+{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'Login/loginapp.css' %}">
+{% endblock head %}
+
+{% block content %}
+    
+    <div class="row" id="main">
+        
+        <div class="col-lg-6 col-md-12 col-sm-12 py-lg-0 py-3 order-1">
+            <h1>Login TO GENIE</h1>
+            
+            {% if messages %}
+            {% for message in messages %}
+            <h3 class="h3">{{message}}</h3>
+            {% endfor %}
+            {% endif %}
+            
+    
+            <form action="/Login" method="POST">
+                {% csrf_token %}
+                <label for="user">Username</label><br>
+                <input type="text" name="username" minlength="8" placeholder="Enter username" id="user"><br>
+                <br>
+                <label for="pass1">Password</label><br>
+                <input type="password" name="password" minlength="8" placeholder="Create password" id="pass1"><br>
+                <br>
+                
+                <input type="submit" value="LOGIN" id="btnn"><br><br>
+                <p><a href="/Register">Don't you have an account?</a></p>
+                <a href="/">Home</a>
+            </form>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 order-md-1">
+            <img src="{% static 'Home/images/login.jpg' %}" class="img-fluid">
+            <p id="bpera">
+                Welcome to GENIE Academy, By logging in to Genie 
+                you can easily access to our services than the 
+                normal users and easy to join our courses
+            </p>
+        </div>        
+    </div>
+
+{% endblock content %}
+    
